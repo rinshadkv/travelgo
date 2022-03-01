@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="{% static 'css/signup.css'%}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+   <style>
+  body {
+  background-image: url("../static/images/a6.jpg");
+   background-repeat: no-repeat;
+  background-size: cover;
+}
+
+   body, html {   
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display:table;
+}
+body {
+    display:table-cell;
+    vertical-align:middle;
+}
+form {
+    display:table;
+    margin:auto;
+}
+</style>
+</head>
+<body>
+     <form action=""  >
+      
+        <div class="container-fluid" style="border: solid;color: white; background-color: lightblue;">
+          <h1 style="color:black;">Sign Up</h1>
+          <p style="color:black;">Please fill in this form to create an account.</p>
+          <hr>
+      
+          <label for="email" style="color:black;"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email"  id="txt_email">
+          <span id="sp_mail"></span>
+      
+          <label for="psw" style="color:black;"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw"  id="txt_password">
+      
+          <label for="psw-repeat" style="color:black;"><b>Repeat Password</b></label>
+          <input type="password" placeholder="Repeat Password" name="psw-repeat"  id="repass">
+      
+          <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px;color: brown;"> Remember me
+          </label>
+      
+          <p style="color:black;">By creating an account you agree to our <a href="" style="color:dodgerblue">Terms & Privacy</a>.</p>
+      
+          <div class="clearfix">
+            <a type="button" class="cancelbtn text-center" style="text-decoration: none;" href="{% url 'home' %}">cancel</a>
+            <button type="submit" class="signupbtn " onclick="signup_function()">Sign Up</button>
+          </div>
+        </div>
+      </form>
+      <script>
+function signup_function(){
+ 
+var mail=document.getElementById("txt_email")
+var pass=document.getElementById("txt_pass")
+var pass2=document.getElementById("repass")
+
+if(mail.value==""){
+  
+  document.getElementById("txt_email").style.border="1px solid red"
+  document.getElementById("sp_mail").innerHTML="enter email"
+}
+else{
+
+}
+document.getElementById("txt_email").style.border="black"
+  document.getElementById("sp_mail").innerHTML
+
+
+}
+
+
+
+
+
+      </script>
+</body>
+</html>
